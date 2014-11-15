@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="patient"
+		class="com.livingoncodes.spring.springtutorial.Patient">
+	<constructor-arg value="5" name="id"></constructor-arg>
+	<constructor-arg value="Tom" name="name"></constructor-arg>
+	<property name="nationalId">
+		<value>12345</value>
+	</property>
+	</bean>
+</beans>
