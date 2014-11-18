@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-init-method="init" default-destroy-method="destroy"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="patient"
+		class="com.livingoncodes.spring.springtutorial.Patient"
+		scope="singleton" init-method="onCreate" destroy-method="onDestroy"
+		factory-method="getInstance">
+		<constructor-arg value="5" name="id"></constructor-arg>
+		<constructor-arg value="Tom" name="name"></constructor-arg>
+		<property name="nationalId">
+			<value>12345</value>
+		</property>
+		<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address" class="com.livingoncodes.spring.springtutorial.Address">
+		<constructor-arg name="street" value="Panthapath"></constructor-arg>
+		<constructor-arg name="postcode" value="1200"></constructor-arg>
+	</bean>
+
+	<bean id="address2" class="com.livingoncodes.spring.springtutorial.Address" p:street="Green Road" p:postcode="1210">
+
+	</bean>
+	
+</beans>
