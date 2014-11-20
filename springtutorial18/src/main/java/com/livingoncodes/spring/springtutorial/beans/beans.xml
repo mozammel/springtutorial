@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	<bean id="patient" class="com.livingoncodes.spring.springtutorial.Patient">
+		<property name="emergencyContacts">
+			<list>
+				<bean class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+					<property name="name" value="Harry"></property>
+					<property name="phoneNumber" value="01711123455"></property>
+				</bean>
+
+				<ref bean="contact1" />
+				<ref bean="contact2" />
+				<ref bean="contact3" />
+				<ref bean="contact4" />
+			</list>
+		</property>
+		<property name="criticalContact">
+			<bean class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+				<property name="name" value="CriticalLink"></property>
+				<property name="phoneNumber" value="01711123455"></property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="contact1"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Imran"></property>
+		<property name="phoneNumber" value="01711123455"></property>
+	</bean>
+	<bean id="contact2"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Joy"></property>
+		<property name="phoneNumber" value="01711123456"></property>
+	</bean>
+	<bean id="contact3"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Ahmed"></property>
+		<property name="phoneNumber" value="01711123457"></property>
+	</bean>
+	<bean id="contact4"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Ritu"></property>
+		<property name="phoneNumber" value="01711123458"></property>
+	</bean>
+
+	<bean id="contactbook"
+		class="com.livingoncodes.spring.springtutorial.ContactBook">
+		<property name="contacts">
+			<map>
+				<entry key="first" value-ref="contact1"></entry>
+				<entry key="second" value-ref="contact2"></entry>
+				<entry key="third" value-ref="contact3"></entry>
+				<entry key="forth" value-ref="contact4"></entry>
+			</map>
+		</property>
+		<property name="patient"><null/></property>
+	</bean>
+</beans>
