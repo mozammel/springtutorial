@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	<bean id="patient" class="com.livingoncodes.spring.springtutorial.Patient">
+		<property name="emergencyContacts">
+			<list>
+				<ref bean="contact1" />
+				<ref bean="contact2" />
+				<ref bean="contact3" />
+				<ref bean="contact4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="contact1"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Imran"></property>
+		<property name="phoneNumber" value="01711123455"></property>
+	</bean>
+	<bean id="contact2"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Joy"></property>
+		<property name="phoneNumber" value="01711123456"></property>
+	</bean>
+	<bean id="contact3"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Ahmed"></property>
+		<property name="phoneNumber" value="01711123457"></property>
+	</bean>
+	<bean id="contact4"
+		class="com.livingoncodes.spring.springtutorial.EmergencyContact">
+		<property name="name" value="Ritu"></property>
+		<property name="phoneNumber" value="01711123458"></property>
+	</bean>
+
+</beans>
