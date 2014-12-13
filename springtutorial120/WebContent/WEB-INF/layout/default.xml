@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="notice.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="title" value="Home"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="home" extends="notice.base">
+		<put-attribute name="title" value="Notices Home"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+
+	<definition name="notices" extends="notice.base">
+		<put-attribute name="title" value="Notices List"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/notices.jsp"></put-attribute>
+	</definition>
+
+	<definition name="login" extends="notice.base">
+		<put-attribute name="title" value="Notices Login"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newaccount" extends="notice.base">
+		<put-attribute name="title" value="Create new account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/newaccount.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountcreated" extends="notice.base">
+		<put-attribute name="title" value="Account Created"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accountcreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="createnotice" extends="notice.base">
+		<put-attribute name="title" value="Create Notice"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/createnotice.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="noticecreated" extends="notice.base">
+		<put-attribute name="title" value="Notice Created"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/noticecreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="denied" extends="notice.base">
+		<put-attribute name="title" value="Access Denied"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/denied.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="admin" extends="notice.base">
+		<put-attribute name="title" value="Admin"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/admin.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="error" extends="notice.base">
+		<put-attribute name="title" value="Error"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="loggedout" extends="notice.base">
+		<put-attribute name="title" value="Logged out"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/loggedout.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
